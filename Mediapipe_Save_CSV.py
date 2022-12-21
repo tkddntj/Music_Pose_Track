@@ -64,7 +64,7 @@ cv2.destroyAllWindows()
 num_coords = len(results.pose_landmarks.landmark)
 landmarks = ['class']
 for i in range(1, num_coords+1):
-    landmarks += ['x{}'.format(i), 'y{}'.format(i), 'z{}'.format(i), 'v{}'.format(i), 'angle{}'.format(i)]
+    landmarks += ['x{}'.format(i), 'y{}'.format(i), 'z{}'.format(i), 'v{}'.format(i), 'La{}'.format(i), 'Ra{}'.format(i)]
 with open('CoordsandAngle.csv', mode='w', newline='') as f:
     csv_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     csv_writer.writerow(landmarks)
